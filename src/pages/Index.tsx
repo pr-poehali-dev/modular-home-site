@@ -11,7 +11,7 @@ const Index = () => {
   const [showCalculator, setShowCalculator] = useState(false);
   const [showCallbackForm, setShowCallbackForm] = useState(false);
   const [showProjectModal, setShowProjectModal] = useState(false);
-  const [activeTab, setActiveTab] = useState<'gallery' | 'plan' | 'materials' | 'specs'>('gallery');
+  const [activeTab, setActiveTab] = useState<'gallery' | 'materials' | 'specs'>('gallery');
   const [area, setArea] = useState(120);
   const [floors, setFloors] = useState(1);
   const [panoramic, setPanoramic] = useState(false);
@@ -577,12 +577,6 @@ const Index = () => {
                 Фото
               </button>
               <button
-                className={`px-6 py-3 font-medium transition-colors ${activeTab === 'plan' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`}
-                onClick={() => setActiveTab('plan')}
-              >
-                Планировка
-              </button>
-              <button
                 className={`px-6 py-3 font-medium transition-colors ${activeTab === 'materials' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`}
                 onClick={() => setActiveTab('materials')}
               >
@@ -602,19 +596,6 @@ const Index = () => {
                   {projects.find(p => p.id === selectedProject)?.gallery.map((img, idx) => (
                     <img key={idx} src={img} alt={`Фото ${idx + 1}`} className="w-full rounded-lg" />
                   ))}
-                </div>
-              )}
-
-              {activeTab === 'plan' && (
-                <div className="text-center py-12">
-                  {projects.find(p => p.id === selectedProject)?.planImage ? (
-                    <img src={projects.find(p => p.id === selectedProject)?.planImage} alt="Планировка" className="w-full max-w-3xl mx-auto rounded-lg" />
-                  ) : (
-                    <div className="text-muted-foreground">
-                      <Icon name="Home" size={64} className="mx-auto mb-4 opacity-20" />
-                      <p>Планировка скоро будет добавлена</p>
-                    </div>
-                  )}
                 </div>
               )}
 
