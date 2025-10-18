@@ -157,8 +157,8 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <Badge className="mb-6 text-lg px-6 py-2">Дома будущего уже сегодня</Badge>
             <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Модульные дома <br />
-              <span className="text-gradient">под ключи за 7 дней</span>
+              Модульный дом <br />
+              <span className="text-gradient">под ключ за 7 дней</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Современные технологии строительства позволяют получить готовый дом премиум-класса в кратчайшие сроки
