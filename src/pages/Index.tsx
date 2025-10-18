@@ -153,7 +153,7 @@ const Index = () => {
       </header>
 
       <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <Badge className="mb-6 text-lg px-6 py-2">Дома будущего уже сегодня</Badge>
@@ -178,7 +178,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="projects" className="py-20 px-4 bg-white">
+      <section id="projects" className="py-20 px-4 bg-gradient-to-b from-background to-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши проекты</h2>
@@ -228,7 +228,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="tech" className="py-20 px-4">
+      <section id="tech" className="py-20 px-4 bg-gradient-to-br from-primary/5 via-accent/5 to-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Технологии строительства</h2>
