@@ -266,11 +266,6 @@ const Index = () => {
       description: 'Современная изоляция снижает расходы на отопление до 60%'
     },
     {
-      icon: 'Shield',
-      title: 'Надёжность',
-      description: 'Срок службы более 100 лет с гарантией 25 лет'
-    },
-    {
       icon: 'Clock',
       title: 'Быстрый монтаж',
       description: 'Изготовление 5 дней, сборка на месте за 2 дня'
@@ -489,7 +484,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Технологии строительства</h2>
             <p className="text-xl text-muted-foreground">Современные решения для вашего комфорта</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {technologies.map((tech, index) => (
               <Card
                 key={index}
