@@ -10,6 +10,8 @@ const Index = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [showCalculator, setShowCalculator] = useState(false);
   const [showCallbackForm, setShowCallbackForm] = useState(false);
+  const [showProjectModal, setShowProjectModal] = useState(false);
+  const [activeTab, setActiveTab] = useState<'gallery' | 'plan' | 'materials' | 'specs'>('gallery');
   const [area, setArea] = useState(120);
   const [floors, setFloors] = useState(1);
   const [panoramic, setPanoramic] = useState(false);
@@ -40,7 +42,22 @@ const Index = () => {
       area: '120 м²',
       price: 'от 2,4 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/16edf763-ea23-4f4f-983f-dfc80242aa44.jpg',
-      features: ['1 этаж', '2 спальни', '1 санузел', 'Терраса', 'Панорамное остекление', 'Эко-материалы']
+      features: ['1 этаж', '2 спальни', '1 санузел', 'Терраса', 'Панорамное остекление', 'Эко-материалы'],
+      gallery: [
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/16edf763-ea23-4f4f-983f-dfc80242aa44.jpg'
+      ],
+      planImage: '',
+      materials: [],
+      specs: {
+        bedrooms: 2,
+        bathrooms: 1,
+        floors: 1,
+        ceilingHeight: '2,5 м',
+        foundation: 'Свайный',
+        walls: '',
+        roof: '',
+        windows: 'Панорамное остекление'
+      }
     },
     {
       id: 2,
@@ -48,7 +65,22 @@ const Index = () => {
       area: '180 м²',
       price: 'от 3,6 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/677da7b7-e84c-4d10-88b2-dc30591fe00f.jpg',
-      features: ['2 этажа', '4 спальни', '2 санузла', 'Панорамное остекление', 'Эко-материалы']
+      features: ['2 этажа', '4 спальни', '2 санузла', 'Панорамное остекление', 'Эко-материалы'],
+      gallery: [
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/677da7b7-e84c-4d10-88b2-dc30591fe00f.jpg'
+      ],
+      planImage: '',
+      materials: [],
+      specs: {
+        bedrooms: 4,
+        bathrooms: 2,
+        floors: 2,
+        ceilingHeight: '2,5 м',
+        foundation: 'Свайный',
+        walls: '',
+        roof: '',
+        windows: 'Панорамное остекление'
+      }
     },
     {
       id: 3,
@@ -56,7 +88,22 @@ const Index = () => {
       area: '90 м²',
       price: 'от 1,8 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/2ff5a0a1-2951-463c-bd0d-14d654d35d2a.jpg',
-      features: ['1 этаж', '2 спальни', '1 санузел', 'Панорамное остекление', 'Эко-материалы']
+      features: ['1 этаж', '2 спальни', '1 санузел', 'Панорамное остекление', 'Эко-материалы'],
+      gallery: [
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/2ff5a0a1-2951-463c-bd0d-14d654d35d2a.jpg'
+      ],
+      planImage: '',
+      materials: [],
+      specs: {
+        bedrooms: 2,
+        bathrooms: 1,
+        floors: 1,
+        ceilingHeight: '2,5 м',
+        foundation: 'Свайный',
+        walls: '',
+        roof: '',
+        windows: 'Панорамное остекление'
+      }
     },
     {
       id: 4,
@@ -64,7 +111,22 @@ const Index = () => {
       area: '60 м²',
       price: 'от 1,2 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/4d27b2b2-c979-405d-93e3-673ef17fd229.jpg',
-      features: ['2 этажа', '1 спальня', '1 санузел', 'Панорамные окна', 'Эко-материалы']
+      features: ['2 этажа', '1 спальня', '1 санузел', 'Панорамные окна', 'Эко-материалы'],
+      gallery: [
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/4d27b2b2-c979-405d-93e3-673ef17fd229.jpg'
+      ],
+      planImage: '',
+      materials: [],
+      specs: {
+        bedrooms: 1,
+        bathrooms: 1,
+        floors: 2,
+        ceilingHeight: '2,5 м',
+        foundation: 'Свайный',
+        walls: '',
+        roof: '',
+        windows: 'Панорамные окна'
+      }
     },
     {
       id: 5,
@@ -72,7 +134,22 @@ const Index = () => {
       area: '50 м²',
       price: 'от 1,0 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/e9e82afb-0dbb-493d-b105-f9dc32bab821.jpg',
-      features: ['1 этаж', 'Студия', '1 санузел', 'Эко-материалы']
+      features: ['1 этаж', 'Студия', '1 санузел', 'Эко-материалы'],
+      gallery: [
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/e9e82afb-0dbb-493d-b105-f9dc32bab821.jpg'
+      ],
+      planImage: '',
+      materials: [],
+      specs: {
+        bedrooms: 0,
+        bathrooms: 1,
+        floors: 1,
+        ceilingHeight: '2,5 м',
+        foundation: 'Свайный',
+        walls: '',
+        roof: '',
+        windows: 'Стандартные'
+      }
     },
     {
       id: 6,
@@ -80,7 +157,22 @@ const Index = () => {
       area: '140 м²',
       price: 'от 2,8 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/83f2c376-3df4-43d0-b67f-fab831a93d4e.jpg',
-      features: ['1 этаж', '2 спальни', '1 санузел', 'Большая терраса', 'Панорамное остекление', 'Эко-материалы']
+      features: ['1 этаж', '2 спальни', '1 санузел', 'Большая терраса', 'Панорамное остекление', 'Эко-материалы'],
+      gallery: [
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/83f2c376-3df4-43d0-b67f-fab831a93d4e.jpg'
+      ],
+      planImage: '',
+      materials: [],
+      specs: {
+        bedrooms: 2,
+        bathrooms: 1,
+        floors: 1,
+        ceilingHeight: '2,5 м',
+        foundation: 'Свайный',
+        walls: '',
+        roof: '',
+        windows: 'Панорамное остекление'
+      }
     }
   ];
 
@@ -205,9 +297,15 @@ const Index = () => {
                     variant="secondary"
                     size="sm"
                     className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedProject(project.id);
+                      setShowProjectModal(true);
+                      setActiveTab('gallery');
+                    }}
                   >
                     <Icon name="Maximize2" size={16} className="mr-2" />
-                    3D-тур
+                    Подробнее
                   </Button>
                 </div>
                 <div className="p-6">
@@ -383,6 +481,149 @@ const Index = () => {
                 Мы перезвоним вам в течение 15 минут
               </p>
             </form>
+          </Card>
+        </div>
+      )}
+
+      {showProjectModal && selectedProject && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowProjectModal(false)}>
+          <Card className="max-w-5xl w-full max-h-[90vh] overflow-y-auto p-8 md:p-12 shadow-2xl animate-fade-in" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-8">
+              <div>
+                <h2 className="text-3xl font-bold">{projects.find(p => p.id === selectedProject)?.title}</h2>
+                <p className="text-xl text-primary font-bold mt-2">{projects.find(p => p.id === selectedProject)?.price}</p>
+              </div>
+              <Button variant="ghost" size="sm" onClick={() => setShowProjectModal(false)}>
+                <Icon name="X" size={24} />
+              </Button>
+            </div>
+
+            <div className="flex gap-2 mb-6 border-b">
+              <button
+                className={`px-6 py-3 font-medium transition-colors ${activeTab === 'gallery' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                onClick={() => setActiveTab('gallery')}
+              >
+                Фото
+              </button>
+              <button
+                className={`px-6 py-3 font-medium transition-colors ${activeTab === 'plan' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                onClick={() => setActiveTab('plan')}
+              >
+                Планировка
+              </button>
+              <button
+                className={`px-6 py-3 font-medium transition-colors ${activeTab === 'materials' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                onClick={() => setActiveTab('materials')}
+              >
+                Материалы
+              </button>
+              <button
+                className={`px-6 py-3 font-medium transition-colors ${activeTab === 'specs' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                onClick={() => setActiveTab('specs')}
+              >
+                Характеристики
+              </button>
+            </div>
+
+            <div className="mb-8">
+              {activeTab === 'gallery' && (
+                <div className="grid gap-4">
+                  {projects.find(p => p.id === selectedProject)?.gallery.map((img, idx) => (
+                    <img key={idx} src={img} alt={`Фото ${idx + 1}`} className="w-full rounded-lg" />
+                  ))}
+                </div>
+              )}
+
+              {activeTab === 'plan' && (
+                <div className="text-center py-12">
+                  {projects.find(p => p.id === selectedProject)?.planImage ? (
+                    <img src={projects.find(p => p.id === selectedProject)?.planImage} alt="Планировка" className="w-full max-w-3xl mx-auto rounded-lg" />
+                  ) : (
+                    <div className="text-muted-foreground">
+                      <Icon name="Home" size={64} className="mx-auto mb-4 opacity-20" />
+                      <p>Планировка скоро будет добавлена</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {activeTab === 'materials' && (
+                <div className="space-y-4">
+                  {projects.find(p => p.id === selectedProject)?.materials.length ? (
+                    projects.find(p => p.id === selectedProject)?.materials.map((material: string, idx: number) => (
+                      <div key={idx} className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
+                        <Icon name="CheckCircle" size={20} className="text-primary mt-1" />
+                        <p>{material}</p>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="text-center py-12 text-muted-foreground">
+                      <Icon name="Package" size={64} className="mx-auto mb-4 opacity-20" />
+                      <p>Информация о материалах скоро будет добавлена</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {activeTab === 'specs' && (
+                <div className="grid md:grid-cols-2 gap-6">
+                  {(() => {
+                    const project = projects.find(p => p.id === selectedProject);
+                    return project ? (
+                      <>
+                        <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                          <Icon name="Bed" size={24} className="text-primary" />
+                          <div>
+                            <p className="text-sm text-muted-foreground">Спальни</p>
+                            <p className="font-bold">{project.specs.bedrooms || 'Студия'}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                          <Icon name="Droplet" size={24} className="text-primary" />
+                          <div>
+                            <p className="text-sm text-muted-foreground">Санузлы</p>
+                            <p className="font-bold">{project.specs.bathrooms}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                          <Icon name="Layers" size={24} className="text-primary" />
+                          <div>
+                            <p className="text-sm text-muted-foreground">Этажность</p>
+                            <p className="font-bold">{project.specs.floors} этаж{project.specs.floors > 1 ? 'а' : ''}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                          <Icon name="ArrowUpFromLine" size={24} className="text-primary" />
+                          <div>
+                            <p className="text-sm text-muted-foreground">Высота потолков</p>
+                            <p className="font-bold">{project.specs.ceilingHeight}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                          <Icon name="Boxes" size={24} className="text-primary" />
+                          <div>
+                            <p className="text-sm text-muted-foreground">Фундамент</p>
+                            <p className="font-bold">{project.specs.foundation}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
+                          <Icon name="Square" size={24} className="text-primary" />
+                          <div>
+                            <p className="text-sm text-muted-foreground">Окна</p>
+                            <p className="font-bold">{project.specs.windows}</p>
+                          </div>
+                        </div>
+                      </>
+                    ) : null;
+                  })()}
+                </div>
+              )}
+            </div>
+
+            <Button className="w-full text-lg py-6 hover-scale" size="lg" onClick={() => { setShowProjectModal(false); setShowCallbackForm(true); }}>
+              <Icon name="Phone" size={20} className="mr-2" />
+              Заказать проект
+            </Button>
           </Card>
         </div>
       )}
