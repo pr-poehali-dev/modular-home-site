@@ -953,10 +953,10 @@ const Index = () => {
 
       <footer className="bg-secondary text-white py-12 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-2xl font-bold mb-4 text-accent">GreenFrame</h3>
-              <p className="text-white/80">Строим дома будущего с 2015 года</p>
+              <p className="text-white/80">Строим дома будущего с 2016 года</p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Контакты</h4>
@@ -969,12 +969,6 @@ const Index = () => {
                   <Icon name="Mail" size={16} />
                   greenframehouse1@yandex.ru
                 </p>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">О компании</h4>
-              <div className="text-white/80">
-                <p>Строим дома будущего с 2016 года</p>
               </div>
             </div>
             <div>
