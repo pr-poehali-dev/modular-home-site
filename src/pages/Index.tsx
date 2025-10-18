@@ -44,18 +44,27 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/16edf763-ea23-4f4f-983f-dfc80242aa44.jpg',
       features: ['1 этаж', '2 спальни', '1 санузел', 'Терраса', 'Панорамное остекление', 'Эко-материалы'],
       gallery: [
-        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/16edf763-ea23-4f4f-983f-dfc80242aa44.jpg'
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/16edf763-ea23-4f4f-983f-dfc80242aa44.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/993bd6e1-bafa-42f7-a055-81b14a608bd2.jpg'
       ],
-      planImage: '',
-      materials: [],
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/3438b8f6-c0ce-4e66-85d4-999e172701db.jpg',
+      materials: [
+        'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
+        'Пол: защита от грызунов + утеплитель + доска 50 мм',
+        'Каркас: металлический с профессиональной сваркой (не скрипит, не "ходит")',
+        'Фундамент: винтовые сваи, высота от земли 20 см',
+        'Транспортировка: специальные крюки для перевозки дома без разборки',
+        'Включено: изготовление, сборка, доставка, электрика',
+        'Внутренняя отделка обсуждается отдельно'
+      ],
       specs: {
         bedrooms: 2,
         bathrooms: 1,
         floors: 1,
         ceilingHeight: '2,5 м',
-        foundation: 'Свайный',
-        walls: '',
-        roof: '',
+        foundation: 'Свайный (высота 20 см)',
+        walls: 'Сэндвич-панели',
+        roof: 'Металлопрофиль',
         windows: 'Панорамное остекление'
       }
     },
@@ -67,18 +76,27 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/677da7b7-e84c-4d10-88b2-dc30591fe00f.jpg',
       features: ['2 этажа', '4 спальни', '2 санузла', 'Панорамное остекление', 'Эко-материалы'],
       gallery: [
-        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/677da7b7-e84c-4d10-88b2-dc30591fe00f.jpg'
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/677da7b7-e84c-4d10-88b2-dc30591fe00f.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/216f3080-97d1-464e-9876-ba49343d1672.jpg'
       ],
-      planImage: '',
-      materials: [],
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/17d19536-bcde-4d68-9a6e-3f6abfee99cf.jpg',
+      materials: [
+        'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
+        'Пол: защита от грызунов + утеплитель + доска 50 мм',
+        'Каркас: металлический с профессиональной сваркой (не скрипит, не "ходит")',
+        'Фундамент: винтовые сваи, высота от земли 20 см',
+        'Транспортировка: специальные крюки для перевозки дома без разборки',
+        'Включено: изготовление, сборка, доставка, электрика',
+        'Внутренняя отделка обсуждается отдельно'
+      ],
       specs: {
         bedrooms: 4,
         bathrooms: 2,
         floors: 2,
         ceilingHeight: '2,5 м',
-        foundation: 'Свайный',
-        walls: '',
-        roof: '',
+        foundation: 'Свайный (высота 20 см)',
+        walls: 'Сэндвич-панели',
+        roof: 'Металлопрофиль',
         windows: 'Панорамное остекление'
       }
     },
@@ -90,18 +108,27 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/2ff5a0a1-2951-463c-bd0d-14d654d35d2a.jpg',
       features: ['1 этаж', '2 спальни', '1 санузел', 'Панорамное остекление', 'Эко-материалы'],
       gallery: [
-        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/2ff5a0a1-2951-463c-bd0d-14d654d35d2a.jpg'
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/2ff5a0a1-2951-463c-bd0d-14d654d35d2a.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/1bb0730a-b05a-4ee0-bc00-3a6e4a3e78de.jpg'
       ],
-      planImage: '',
-      materials: [],
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/b5861cbc-b66d-4dcd-8961-8db89fd9746a.jpg',
+      materials: [
+        'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
+        'Пол: защита от грызунов + утеплитель + доска 50 мм',
+        'Каркас: металлический с профессиональной сваркой (не скрипит, не "ходит")',
+        'Фундамент: винтовые сваи, высота от земли 20 см',
+        'Транспортировка: специальные крюки для перевозки дома без разборки',
+        'Включено: изготовление, сборка, доставка, электрика',
+        'Внутренняя отделка обсуждается отдельно'
+      ],
       specs: {
         bedrooms: 2,
         bathrooms: 1,
         floors: 1,
         ceilingHeight: '2,5 м',
-        foundation: 'Свайный',
-        walls: '',
-        roof: '',
+        foundation: 'Свайный (высота 20 см)',
+        walls: 'Сэндвич-панели',
+        roof: 'Металлопрофиль',
         windows: 'Панорамное остекление'
       }
     },
@@ -115,16 +142,24 @@ const Index = () => {
       gallery: [
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/4d27b2b2-c979-405d-93e3-673ef17fd229.jpg'
       ],
-      planImage: '',
-      materials: [],
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/94143968-a2fb-40f5-ae01-40b42b82422f.jpg',
+      materials: [
+        'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
+        'Пол: защита от грызунов + утеплитель + доска 50 мм',
+        'Каркас: металлический с профессиональной сваркой (не скрипит, не "ходит")',
+        'Фундамент: винтовые сваи, высота от земли 20 см',
+        'Транспортировка: специальные крюки для перевозки дома без разборки',
+        'Включено: изготовление, сборка, доставка, электрика',
+        'Внутренняя отделка обсуждается отдельно'
+      ],
       specs: {
         bedrooms: 1,
         bathrooms: 1,
         floors: 2,
         ceilingHeight: '2,5 м',
-        foundation: 'Свайный',
-        walls: '',
-        roof: '',
+        foundation: 'Свайный (высота 20 см)',
+        walls: 'Сэндвич-панели',
+        roof: 'Металлопрофиль',
         windows: 'Панорамные окна'
       }
     },
@@ -136,18 +171,27 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/e9e82afb-0dbb-493d-b105-f9dc32bab821.jpg',
       features: ['1 этаж', 'Студия', '1 санузел', 'Эко-материалы'],
       gallery: [
-        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/e9e82afb-0dbb-493d-b105-f9dc32bab821.jpg'
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/e9e82afb-0dbb-493d-b105-f9dc32bab821.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/807ffda1-53d9-433a-b43a-d90aaf3e8c5b.jpg'
       ],
-      planImage: '',
-      materials: [],
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/82601c05-97a3-4a9f-a848-58f9309c04d5.jpg',
+      materials: [
+        'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
+        'Пол: защита от грызунов + утеплитель + доска 50 мм',
+        'Каркас: металлический с профессиональной сваркой (не скрипит, не "ходит")',
+        'Фундамент: винтовые сваи, высота от земли 20 см',
+        'Транспортировка: специальные крюки для перевозки дома без разборки',
+        'Включено: изготовление, сборка, доставка, электрика',
+        'Внутренняя отделка обсуждается отдельно'
+      ],
       specs: {
         bedrooms: 0,
         bathrooms: 1,
         floors: 1,
         ceilingHeight: '2,5 м',
-        foundation: 'Свайный',
-        walls: '',
-        roof: '',
+        foundation: 'Свайный (высота 20 см)',
+        walls: 'Сэндвич-панели',
+        roof: 'Металлопрофиль',
         windows: 'Стандартные'
       }
     },
@@ -159,18 +203,27 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/83f2c376-3df4-43d0-b67f-fab831a93d4e.jpg',
       features: ['1 этаж', '2 спальни', '1 санузел', 'Большая терраса', 'Панорамное остекление', 'Эко-материалы'],
       gallery: [
-        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/83f2c376-3df4-43d0-b67f-fab831a93d4e.jpg'
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/83f2c376-3df4-43d0-b67f-fab831a93d4e.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/c8ad0aa8-801b-446d-af82-34c1ba3983c7.jpg'
       ],
-      planImage: '',
-      materials: [],
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/287f9db0-79b6-441d-8a04-9a6974e24085.jpg',
+      materials: [
+        'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
+        'Пол: защита от грызунов + утеплитель + доска 50 мм',
+        'Каркас: металлический с профессиональной сваркой (не скрипит, не "ходит")',
+        'Фундамент: винтовые сваи, высота от земли 20 см',
+        'Транспортировка: специальные крюки для перевозки дома без разборки',
+        'Включено: изготовление, сборка, доставка, электрика',
+        'Внутренняя отделка обсуждается отдельно'
+      ],
       specs: {
         bedrooms: 2,
         bathrooms: 1,
         floors: 1,
         ceilingHeight: '2,5 м',
-        foundation: 'Свайный',
-        walls: '',
-        roof: '',
+        foundation: 'Свайный (высота 20 см)',
+        walls: 'Сэндвич-панели',
+        roof: 'Металлопрофиль',
         windows: 'Панорамное остекление'
       }
     }
