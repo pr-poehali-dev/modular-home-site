@@ -9,9 +9,27 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [showCalculator, setShowCalculator] = useState(false);
+  const [area, setArea] = useState(120);
+  const [floors, setFloors] = useState(1);
+  const [panoramic, setPanoramic] = useState(false);
+  const [terrace, setTerrace] = useState(false);
+  const [smartHome, setSmartHome] = useState(false);
 
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const calculatePrice = () => {
+    const basePrice = area * 20000;
+    let additionalCost = 0;
+    if (panoramic) additionalCost += 300000;
+    if (terrace) additionalCost += 200000;
+    if (smartHome) additionalCost += 150000;
+    return basePrice + additionalCost;
+  };
+
+  const formatPrice = (price: number) => {
+    return (price / 1000000).toFixed(1);
   };
 
   const projects = [
@@ -346,28 +364,63 @@ const Index = () => {
             <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Площадь дома (м²)</label>
-                <Input type="number" placeholder="Например: 120" className="text-lg py-6" />
+                <Input 
+                  type="number" 
+                  value={area}
+                  onChange={(e) => setArea(Number(e.target.value))}
+                  placeholder="Например: 120" 
+                  className="text-lg py-6" 
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Количество этажей</label>
                 <div className="flex gap-4">
-                  <Button type="button" variant="outline" className="flex-1 py-6">1 этаж</Button>
-                  <Button type="button" variant="outline" className="flex-1 py-6">2 этажа</Button>
+                  <Button 
+                    type="button" 
+                    variant={floors === 1 ? "default" : "outline"} 
+                    className="flex-1 py-6"
+                    onClick={() => setFloors(1)}
+                  >
+                    1 этаж
+                  </Button>
+                  <Button 
+                    type="button" 
+                    variant={floors === 2 ? "default" : "outline"} 
+                    className="flex-1 py-6"
+                    onClick={() => setFloors(2)}
+                  >
+                    2 этажа
+                  </Button>
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Дополнительные опции</label>
                 <div className="space-y-2">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" className="w-5 h-5" />
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input 
+                      type="checkbox" 
+                      className="w-5 h-5" 
+                      checked={panoramic}
+                      onChange={(e) => setPanoramic(e.target.checked)}
+                    />
                     <span>Панорамное остекление (+300 000 ₽)</span>
                   </label>
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" className="w-5 h-5" />
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input 
+                      type="checkbox" 
+                      className="w-5 h-5" 
+                      checked={terrace}
+                      onChange={(e) => setTerrace(e.target.checked)}
+                    />
                     <span>Терраса (+200 000 ₽)</span>
                   </label>
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" className="w-5 h-5" />
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input 
+                      type="checkbox" 
+                      className="w-5 h-5" 
+                      checked={smartHome}
+                      onChange={(e) => setSmartHome(e.target.checked)}
+                    />
                     <span>Умный дом (+150 000 ₽)</span>
                   </label>
                 </div>
@@ -375,7 +428,10 @@ const Index = () => {
               <div className="bg-primary/10 p-6 rounded-lg">
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-2">Предварительная стоимость</p>
-                  <p className="text-4xl font-bold text-primary">от 2,4 млн ₽</p>
+                  <p className="text-4xl font-bold text-primary">{formatPrice(calculatePrice())} млн ₽</p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    {area} м² × 20 000 ₽/м² {panoramic || terrace || smartHome ? '+ опции' : ''}
+                  </p>
                 </div>
               </div>
               <div>
