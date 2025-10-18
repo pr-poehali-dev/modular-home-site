@@ -898,53 +898,18 @@ const Index = () => {
                   </Button>
                 </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Дополнительные опции</label>
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input 
-                      type="checkbox" 
-                      className="w-5 h-5" 
-                      checked={panoramic}
-                      onChange={(e) => setPanoramic(e.target.checked)}
-                    />
-                    <span>Панорамное остекление (+300 000 ₽)</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input 
-                      type="checkbox" 
-                      className="w-5 h-5" 
-                      checked={terrace}
-                      onChange={(e) => setTerrace(e.target.checked)}
-                    />
-                    <span>Терраса (+200 000 ₽)</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input 
-                      type="checkbox" 
-                      className="w-5 h-5" 
-                      checked={smartHome}
-                      onChange={(e) => setSmartHome(e.target.checked)}
-                    />
-                    <span>Умный дом (+150 000 ₽)</span>
-                  </label>
-                </div>
-              </div>
               <div className="bg-primary/10 p-6 rounded-lg">
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-2">Предварительная стоимость</p>
                   <p className="text-4xl font-bold text-primary">{formatPrice(calculatePrice())} млн ₽</p>
                   <p className="text-sm text-muted-foreground mt-2">
-                    {area} м² × 20 000 ₽/м² {panoramic || terrace || smartHome ? '+ опции' : ''}
+                    {area} м² × 20 000 ₽/м²
                   </p>
                 </div>
               </div>
-              <div>
-                <Input type="tel" placeholder="Ваш телефон для точного расчёта" className="text-lg py-6" />
-              </div>
-              <Button className="w-full text-lg py-6 hover-scale" size="lg">
-                <Icon name="Send" size={20} className="mr-2" />
-                Получить точный расчёт
+              <Button className="w-full text-lg py-6 hover-scale" size="lg" onClick={() => { setShowCalculator(false); setShowCallbackForm(true); }}>
+                <Icon name="Calculator" size={20} className="mr-2" />
+                Получить расчёт
               </Button>
             </form>
           </Card>
