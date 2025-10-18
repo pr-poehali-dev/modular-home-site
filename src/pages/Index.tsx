@@ -50,7 +50,7 @@ const Index = () => {
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/af027282-b3a2-416b-9ddb-555b3eb4d920.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/993bd6e1-bafa-42f7-a055-81b14a608bd2.jpg'
       ],
-      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/3438b8f6-c0ce-4e66-85d4-999e172701db.jpg',
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/a948830f-1273-451a-9d19-137962328566.jpg',
       materials: [
         'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
         'Пол: защита от грызунов + утеплитель + доска 50 мм',
@@ -85,7 +85,7 @@ const Index = () => {
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/822790e9-8569-42af-a9ff-005482eb39aa.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/216f3080-97d1-464e-9876-ba49343d1672.jpg'
       ],
-      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/17d19536-bcde-4d68-9a6e-3f6abfee99cf.jpg',
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/679eab22-c618-4491-8910-3bf92acf3687.jpg',
       materials: [
         'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
         'Пол: защита от грызунов + утеплитель + доска 50 мм',
@@ -120,7 +120,7 @@ const Index = () => {
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/fb8a99b6-18b0-4aeb-a576-04c6bd3780e2.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/1bb0730a-b05a-4ee0-bc00-3a6e4a3e78de.jpg'
       ],
-      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/b5861cbc-b66d-4dcd-8961-8db89fd9746a.jpg',
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/9eb9e687-7626-4787-aa0e-bd618e852942.jpg',
       materials: [
         'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
         'Пол: защита от грызунов + утеплитель + доска 50 мм',
@@ -154,7 +154,7 @@ const Index = () => {
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/824678fd-0dc2-4f6c-837e-60c0d450e9a1.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/07acc189-cab6-4eaf-92c3-41a8e5a5744b.jpg'
       ],
-      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/94143968-a2fb-40f5-ae01-40b42b82422f.jpg',
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/d0322b25-0a5f-4243-93e4-61a9ea7b0171.jpg',
       materials: [
         'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
         'Пол: защита от грызунов + утеплитель + доска 50 мм',
@@ -189,7 +189,7 @@ const Index = () => {
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/15637550-f557-4dbc-9d10-d84ef47274ed.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/807ffda1-53d9-433a-b43a-d90aaf3e8c5b.jpg'
       ],
-      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/82601c05-97a3-4a9f-a848-58f9309c04d5.jpg',
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/7f3729b8-d154-4aa1-ac2e-63076c7dd9f3.jpg',
       materials: [
         'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
         'Пол: защита от грызунов + утеплитель + доска 50 мм',
@@ -224,7 +224,7 @@ const Index = () => {
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/a5cecc4a-b427-4698-b3fd-ab595b025610.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/c8ad0aa8-801b-446d-af82-34c1ba3983c7.jpg'
       ],
-      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/287f9db0-79b6-441d-8a04-9a6974e24085.jpg',
+      planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/d168e713-b035-4174-9954-f7ba0bec0a74.jpg',
       materials: [
         'Стены: сэндвич-панели (металл + минвата + OSB 11 мм) — отличная гидро- и термоизоляция',
         'Пол: защита от грызунов + утеплитель + доска 50 мм',
