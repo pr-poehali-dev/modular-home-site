@@ -269,6 +269,11 @@ const Index = () => {
       icon: 'Clock',
       title: 'Быстрый монтаж',
       description: 'Изготовление 5 дней, сборка на месте за 2 дня'
+    },
+    {
+      icon: 'Truck',
+      title: 'Доставка',
+      description: 'Доставка в любой регион России!'
     }
   ];
 
@@ -484,7 +489,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Технологии строительства</h2>
             <p className="text-xl text-muted-foreground">Современные решения для вашего комфорта</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <Card
                 key={index}
