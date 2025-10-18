@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -17,6 +17,7 @@ const Index = () => {
   const [panoramic, setPanoramic] = useState(false);
   const [terrace, setTerrace] = useState(false);
   const [smartHome, setSmartHome] = useState(false);
+  const [currentReview, setCurrentReview] = useState(0);
 
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
@@ -282,19 +283,61 @@ const Index = () => {
     {
       name: 'Александр М.',
       text: 'За месяц получили готовый дом! Качество на высоте, всё продумано до мелочей.',
-      rating: 5
+      rating: 5,
+      photo: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/983958fb-78e2-4310-8d8e-33c9d73883ad.jpg'
     },
     {
       name: 'Екатерина П.',
       text: 'Очень довольны энергоэффективностью. Счета за отопление снизились в 3 раза.',
-      rating: 5
+      rating: 5,
+      photo: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/6b41f518-eba2-4e0b-aad7-f14ac1118c70.jpg'
     },
     {
       name: 'Дмитрий К.',
       text: 'Современный дизайн и экологичные материалы. Рекомендую всем!',
-      rating: 5
+      rating: 5,
+      photo: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/dda7ca6b-38e9-405f-b12f-76b0537085c9.jpg'
+    },
+    {
+      name: 'Марина С.',
+      text: 'Процесс сборки занял всего 2 дня! Не верила, что так быстро можно получить качественный дом.',
+      rating: 5,
+      photo: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/d8e7be1b-ec54-444b-b96e-09354a77d315.jpg'
+    },
+    {
+      name: 'Андрей и Ольга',
+      text: 'Выбрали модель "Комфорт" и не пожалели. Панорамные окна дают много света, дом очень тёплый!',
+      rating: 5,
+      photo: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/ebff5644-ec94-4e4a-98cd-58093e0db814.jpg'
+    },
+    {
+      name: 'Владимир И.',
+      text: 'Отличная шумоизоляция, не слышно ни ветра, ни дождя. Металлокаркас надёжный, ничего не скрипит.',
+      rating: 5,
+      photo: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/0182d54f-661d-4792-99fb-23eb18a50a8e.jpg'
+    },
+    {
+      name: 'Юлия В.',
+      text: 'Заказали студию "Компакт" для дачи. Пространство использовано максимально эффективно!',
+      rating: 5,
+      photo: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/521d9272-6bcc-41c2-8347-5b8a79af71ff.jpg'
     }
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReview((prev) => (prev + 1) % reviews.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [reviews.length]);
+
+  const nextReview = () => {
+    setCurrentReview((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -469,24 +512,76 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-4 bg-white">
+      <section id="reviews" className="py-20 px-4 bg-white overflow-hidden">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы клиентов</h2>
             <p className="text-xl text-muted-foreground">Что говорят владельцы наших домов</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <Card key={index} className="p-6 hover:shadow-xl transition-shadow">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Icon key={i} name="Star" size={20} className="text-accent fill-accent" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-4 italic">"{review.text}"</p>
-                <p className="font-bold">{review.name}</p>
-              </Card>
-            ))}
+          
+          <div className="relative max-w-4xl mx-auto">
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentReview * 100}%)` }}
+              >
+                {reviews.map((review, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    <Card className="p-8 md:p-12 shadow-2xl">
+                      <div className="flex flex-col md:flex-row gap-8 items-center">
+                        <div className="flex-shrink-0">
+                          <img 
+                            src={review.photo} 
+                            alt={review.name}
+                            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg"
+                          />
+                        </div>
+                        <div className="flex-1 text-center md:text-left">
+                          <div className="flex gap-1 mb-4 justify-center md:justify-start">
+                            {[...Array(review.rating)].map((_, i) => (
+                              <Icon key={i} name="Star" size={24} className="text-accent fill-accent" />
+                            ))}
+                          </div>
+                          <p className="text-lg md:text-xl text-muted-foreground mb-6 italic leading-relaxed">
+                            "{review.text}"
+                          </p>
+                          <p className="text-xl font-bold text-primary">{review.name}</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button
+              onClick={prevReview}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 rounded-full bg-primary text-white shadow-xl hover:bg-primary/90 transition-all hover:scale-110 flex items-center justify-center z-10"
+              aria-label="Предыдущий отзыв"
+            >
+              <Icon name="ChevronLeft" size={24} />
+            </button>
+
+            <button
+              onClick={nextReview}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 rounded-full bg-primary text-white shadow-xl hover:bg-primary/90 transition-all hover:scale-110 flex items-center justify-center z-10"
+              aria-label="Следующий отзыв"
+            >
+              <Icon name="ChevronRight" size={24} />
+            </button>
+
+            <div className="flex justify-center gap-2 mt-8">
+              {reviews.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentReview(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    currentReview === index ? 'bg-primary w-8' : 'bg-muted-foreground/30'
+                  }`}
+                  aria-label={`Перейти к отзыву ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
