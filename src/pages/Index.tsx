@@ -137,7 +137,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-secondary">ModularHomes</h1>
+          <h1 className="text-2xl font-bold text-secondary">GreenFrame</h1>
           <nav className="hidden md:flex gap-6">
             <a href="#projects" className="hover:text-primary transition-colors">Проекты</a>
             <a href="#tech" className="hover:text-primary transition-colors">Технологии</a>
@@ -485,7 +485,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">ModularHomes</h3>
+              <h3 className="text-2xl font-bold mb-4">GreenFrame</h3>
               <p className="text-white/80">Строим дома будущего с 2015 года</p>
             </div>
             <div>
