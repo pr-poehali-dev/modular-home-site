@@ -1,5 +1,5 @@
 """
-Business: Отправка заявок с сайта в Telegram бот
+Business: Отправка заявок с сайта в Telegram бот (обновлено)
 Args: event - dict с httpMethod, body (name, phone, email, message)
       context - object с request_id
 Returns: HTTP response dict
