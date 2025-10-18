@@ -9,6 +9,7 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [showCalculator, setShowCalculator] = useState(false);
+  const [showCallbackForm, setShowCallbackForm] = useState(false);
   const [area, setArea] = useState(120);
   const [floors, setFloors] = useState(1);
   const [panoramic, setPanoramic] = useState(false);
@@ -144,7 +145,7 @@ const Index = () => {
             <a href="#reviews" className="hover:text-primary transition-colors">Отзывы</a>
             <a href="#contact" className="hover:text-primary transition-colors">Контакты</a>
           </nav>
-          <Button className="hidden md:flex">
+          <Button className="hidden md:flex" onClick={() => setShowCallbackForm(true)}>
             <Icon name="Phone" size={18} className="mr-2" />
             Заказать звонок
           </Button>
@@ -351,6 +352,40 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {showCallbackForm && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowCallbackForm(false)}>
+          <Card className="max-w-md w-full p-8 md:p-12 shadow-2xl animate-fade-in" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-3xl font-bold">Заказать звонок</h2>
+              <Button variant="ghost" size="sm" onClick={() => setShowCallbackForm(false)}>
+                <Icon name="X" size={24} />
+              </Button>
+            </div>
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium mb-2">Имя</label>
+                <Input placeholder="Введите ваше имя" className="text-lg py-6" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Фамилия</label>
+                <Input placeholder="Введите вашу фамилию" className="text-lg py-6" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Номер телефона</label>
+                <Input type="tel" placeholder="+7 (___) ___-__-__" className="text-lg py-6" />
+              </div>
+              <Button className="w-full text-lg py-6 hover-scale" size="lg">
+                <Icon name="Phone" size={20} className="mr-2" />
+                Заказать звонок
+              </Button>
+              <p className="text-sm text-center text-muted-foreground">
+                Мы перезвоним вам в течение 15 минут
+              </p>
+            </form>
+          </Card>
+        </div>
+      )}
 
       {showCalculator && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowCalculator(false)}>
