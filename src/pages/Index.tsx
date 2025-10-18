@@ -14,49 +14,49 @@ const Index = () => {
       id: 1,
       title: 'Модель "Комфорт"',
       area: '120 м²',
-      price: 'от 4,5 млн ₽',
-      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/16edf763-ea23-4f4f-983f-dfc80242aa44.jpg',
-      features: ['3 спальни', '2 санузла', 'Терраса']
+      price: 'от 2,4 млн ₽',
+      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/b3b8ee02-d581-486a-8378-52b876f8b3f7.jpg',
+      features: ['2 этажа', '3 спальни', 'Потолки 2,5м', 'Свайный фундамент']
     },
     {
       id: 2,
       title: 'Модель "Премиум"',
       area: '180 м²',
-      price: 'от 7,2 млн ₽',
-      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/677da7b7-e84c-4d10-88b2-dc30591fe00f.jpg',
-      features: ['4 спальни', '3 санузла', 'Панорамное остекление']
+      price: 'от 3,6 млн ₽',
+      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/d9a158ab-f6c5-4a1a-9e2e-8bd0c4f2e46f.jpg',
+      features: ['2 этажа', '4 спальни', 'Панорамное остекление', 'Потолки 2,5м']
     },
     {
       id: 3,
       title: 'Модель "Уют"',
       area: '90 м²',
-      price: 'от 3,2 млн ₽',
-      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/2ff5a0a1-2951-463c-bd0d-14d654d35d2a.jpg',
-      features: ['2 спальни', '1 санузел', 'Эко-материалы']
+      price: 'от 1,8 млн ₽',
+      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/1f6f1a8c-aad7-4822-83ef-12e1cddd441a.jpg',
+      features: ['1 этаж', '2 спальни', 'Эко-материалы', 'Потолки 2,5м']
     },
     {
       id: 4,
       title: 'Модель "Минимал"',
       area: '60 м²',
       price: 'от 1,2 млн ₽',
-      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/4d27b2b2-c979-405d-93e3-673ef17fd229.jpg',
-      features: ['1 этаж', '1 спальня', 'Панорамные окна']
+      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/d3be3506-e298-4fed-a0d2-da026aaab015.jpg',
+      features: ['1 этаж', '1 спальня', 'Панорамные окна', 'Винтовые сваи']
     },
     {
       id: 5,
       title: 'Модель "Компакт"',
       area: '50 м²',
       price: 'от 1,0 млн ₽',
-      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/e9e82afb-0dbb-493d-b105-f9dc32bab821.jpg',
-      features: ['1 этаж', 'Студия', 'Эко-дерево']
+      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/7d171afb-f500-4a4d-b1eb-9651c18ad365.jpg',
+      features: ['1 этаж', 'Студия', 'Эко-дерево', 'Потолки 2,5м']
     },
     {
       id: 6,
       title: 'Модель "Люкс"',
       area: '140 м²',
       price: 'от 2,8 млн ₽',
-      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/83f2c376-3df4-43d0-b67f-fab831a93d4e.jpg',
-      features: ['1 этаж', '3 спальни', 'Большая терраса']
+      image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/6f2ac28b-211f-4945-8336-b55db994be9d.jpg',
+      features: ['1 этаж', '3 спальни', 'Большая терраса', 'Свайный фундамент']
     }
   ];
 
