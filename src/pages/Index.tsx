@@ -963,20 +963,18 @@ const Index = () => {
               <div className="space-y-2 text-white/80">
                 <p className="flex items-center gap-2">
                   <Icon name="Phone" size={16} />
-                  +7 (495) 123-45-67
+                  +7 (989) 500-22-77
                 </p>
                 <p className="flex items-center gap-2">
                   <Icon name="Mail" size={16} />
-                  info@modularhomes.ru
+                  greenframehouse1@yandex.ru
                 </p>
               </div>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Компания</h4>
-              <div className="space-y-2 text-white/80">
-                <p>О нас</p>
-                <p>Вакансии</p>
-                <p>Партнёрам</p>
+              <h4 className="font-bold mb-4">О компании</h4>
+              <div className="text-white/80">
+                <p>Строим дома будущего с 2016 года</p>
               </div>
             </div>
             <div>
@@ -989,7 +987,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-white/20 pt-8 text-center text-white/60">
-            <p>© 2024 ModularHomes. Все права защищены.</p>
+            <p>© 2025 GreenFrame. Все права защищены</p>
           </div>
         </div>
       </footer>
