@@ -8,6 +8,11 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [showCalculator, setShowCalculator] = useState(false);
+
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const projects = [
     {
@@ -141,11 +146,11 @@ const Index = () => {
               Современные технологии строительства позволяют получить готовый дом премиум-класса в кратчайшие сроки
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6 hover-scale">
+              <Button size="lg" className="text-lg px-8 py-6 hover-scale" onClick={scrollToProjects}>
                 <Icon name="Home" size={20} className="mr-2" />
                 Смотреть проекты
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 hover-scale">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 hover-scale" onClick={() => setShowCalculator(true)}>
                 <Icon name="Calculator" size={20} className="mr-2" />
                 Рассчитать стоимость
               </Button>
@@ -328,6 +333,62 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {showCalculator && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowCalculator(false)}>
+          <Card className="max-w-2xl w-full p-8 md:p-12 shadow-2xl animate-fade-in" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-3xl font-bold">Калькулятор стоимости</h2>
+              <Button variant="ghost" size="sm" onClick={() => setShowCalculator(false)}>
+                <Icon name="X" size={24} />
+              </Button>
+            </div>
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium mb-2">Площадь дома (м²)</label>
+                <Input type="number" placeholder="Например: 120" className="text-lg py-6" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Количество этажей</label>
+                <div className="flex gap-4">
+                  <Button type="button" variant="outline" className="flex-1 py-6">1 этаж</Button>
+                  <Button type="button" variant="outline" className="flex-1 py-6">2 этажа</Button>
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Дополнительные опции</label>
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" className="w-5 h-5" />
+                    <span>Панорамное остекление (+300 000 ₽)</span>
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" className="w-5 h-5" />
+                    <span>Терраса (+200 000 ₽)</span>
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" className="w-5 h-5" />
+                    <span>Умный дом (+150 000 ₽)</span>
+                  </label>
+                </div>
+              </div>
+              <div className="bg-primary/10 p-6 rounded-lg">
+                <div className="text-center">
+                  <p className="text-sm text-muted-foreground mb-2">Предварительная стоимость</p>
+                  <p className="text-4xl font-bold text-primary">от 2,4 млн ₽</p>
+                </div>
+              </div>
+              <div>
+                <Input type="tel" placeholder="Ваш телефон для точного расчёта" className="text-lg py-6" />
+              </div>
+              <Button className="w-full text-lg py-6 hover-scale" size="lg">
+                <Icon name="Send" size={20} className="mr-2" />
+                Получить точный расчёт
+              </Button>
+            </form>
+          </Card>
+        </div>
+      )}
 
       <footer className="bg-secondary text-white py-12 px-4">
         <div className="container mx-auto">
