@@ -18,6 +18,12 @@ const Index = () => {
   const [terrace, setTerrace] = useState(false);
   const [smartHome, setSmartHome] = useState(false);
   const [currentReview, setCurrentReview] = useState(0);
+  const [formName, setFormName] = useState('');
+  const [formPhone, setFormPhone] = useState('');
+  const [formEmail, setFormEmail] = useState('');
+  const [formMessage, setFormMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
@@ -339,6 +345,43 @@ const Index = () => {
     setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/26cbb824-766e-46d9-b73b-1a38088ac7e8', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formName,
+          phone: formPhone,
+          email: formEmail,
+          message: formMessage
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitMessage('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+        setFormName('');
+        setFormPhone('');
+        setFormEmail('');
+        setFormMessage('');
+      } else {
+        setSubmitMessage(`❌ ${data.error || 'Ошибка отправки заявки'}`);
+      }
+    } catch (error) {
+      setSubmitMessage('❌ Ошибка соединения. Попробуйте позже.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
@@ -594,19 +637,58 @@ const Index = () => {
                 <h2 className="text-4xl font-bold mb-4">Оставьте заявку</h2>
                 <p className="text-muted-foreground">Мы свяжемся с вами в течение 15 минут</p>
               </div>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <Input placeholder="Ваше имя" className="text-lg py-6" />
+                  <Input 
+                    placeholder="Ваше имя" 
+                    className="text-lg py-6" 
+                    value={formName}
+                    onChange={(e) => setFormName(e.target.value)}
+                    required
+                  />
                 </div>
                 <div>
-                  <Input type="tel" placeholder="Телефон" className="text-lg py-6" />
+                  <Input 
+                    type="tel" 
+                    placeholder="Телефон" 
+                    className="text-lg py-6" 
+                    value={formPhone}
+                    onChange={(e) => setFormPhone(e.target.value)}
+                    required
+                  />
                 </div>
                 <div>
-                  <Textarea placeholder="Комментарий (необязательно)" className="min-h-[120px]" />
+                  <Input 
+                    type="email" 
+                    placeholder="Email (необязательно)" 
+                    className="text-lg py-6" 
+                    value={formEmail}
+                    onChange={(e) => setFormEmail(e.target.value)}
+                  />
                 </div>
-                <Button className="w-full text-lg py-6 hover-scale" size="lg">
+                <div>
+                  <Textarea 
+                    placeholder="Комментарий (необязательно)" 
+                    className="min-h-[120px]" 
+                    value={formMessage}
+                    onChange={(e) => setFormMessage(e.target.value)}
+                  />
+                </div>
+                {submitMessage && (
+                  <div className={`p-4 rounded-lg text-center font-medium ${
+                    submitMessage.includes('✅') ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'
+                  }`}>
+                    {submitMessage}
+                  </div>
+                )}
+                <Button 
+                  type="submit" 
+                  className="w-full text-lg py-6 hover-scale" 
+                  size="lg"
+                  disabled={isSubmitting}
+                >
                   <Icon name="Send" size={20} className="mr-2" />
-                  Отправить заявку
+                  {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                 </Button>
                 <p className="text-sm text-center text-muted-foreground">
                   Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
