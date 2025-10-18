@@ -45,6 +45,9 @@ const Index = () => {
       features: ['1 этаж', '2 спальни', '1 санузел', 'Терраса', 'Панорамное остекление', 'Эко-материалы'],
       gallery: [
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/16edf763-ea23-4f4f-983f-dfc80242aa44.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/fe6f272d-edc2-420a-a451-4a4256de6320.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/12a142f6-1294-4bc2-9fc2-853d16838559.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/af027282-b3a2-416b-9ddb-555b3eb4d920.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/993bd6e1-bafa-42f7-a055-81b14a608bd2.jpg'
       ],
       planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/3438b8f6-c0ce-4e66-85d4-999e172701db.jpg',
@@ -77,6 +80,9 @@ const Index = () => {
       features: ['2 этажа', '4 спальни', '2 санузла', 'Панорамное остекление', 'Эко-материалы'],
       gallery: [
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/677da7b7-e84c-4d10-88b2-dc30591fe00f.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/613151bc-1b6b-426d-8c27-9089d23dbfda.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/14914ec1-05b2-4a62-9089-442351f1bc4d.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/822790e9-8569-42af-a9ff-005482eb39aa.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/216f3080-97d1-464e-9876-ba49343d1672.jpg'
       ],
       planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/17d19536-bcde-4d68-9a6e-3f6abfee99cf.jpg',
@@ -109,6 +115,9 @@ const Index = () => {
       features: ['1 этаж', '2 спальни', '1 санузел', 'Панорамное остекление', 'Эко-материалы'],
       gallery: [
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/2ff5a0a1-2951-463c-bd0d-14d654d35d2a.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/a909b8cc-b502-4d68-a137-7780baddac34.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/261b642f-e406-413e-8bde-97ac35d629e9.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/fb8a99b6-18b0-4aeb-a576-04c6bd3780e2.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/1bb0730a-b05a-4ee0-bc00-3a6e4a3e78de.jpg'
       ],
       planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/b5861cbc-b66d-4dcd-8961-8db89fd9746a.jpg',
@@ -140,7 +149,10 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/4d27b2b2-c979-405d-93e3-673ef17fd229.jpg',
       features: ['2 этажа', '1 спальня', '1 санузел', 'Панорамные окна', 'Эко-материалы'],
       gallery: [
-        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/4d27b2b2-c979-405d-93e3-673ef17fd229.jpg'
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/4d27b2b2-c979-405d-93e3-673ef17fd229.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/191141a8-7200-4920-a014-ba17b7c4b6a0.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/824678fd-0dc2-4f6c-837e-60c0d450e9a1.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/07acc189-cab6-4eaf-92c3-41a8e5a5744b.jpg'
       ],
       planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/94143968-a2fb-40f5-ae01-40b42b82422f.jpg',
       materials: [
@@ -172,6 +184,9 @@ const Index = () => {
       features: ['1 этаж', 'Студия', '1 санузел', 'Эко-материалы'],
       gallery: [
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/e9e82afb-0dbb-493d-b105-f9dc32bab821.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/43ab62e9-4374-4153-92fd-7ed81206f834.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/31afe0af-b575-4b90-bb11-ff110e58e5ce.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/15637550-f557-4dbc-9d10-d84ef47274ed.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/807ffda1-53d9-433a-b43a-d90aaf3e8c5b.jpg'
       ],
       planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/82601c05-97a3-4a9f-a848-58f9309c04d5.jpg',
@@ -204,6 +219,9 @@ const Index = () => {
       features: ['1 этаж', '2 спальни', '1 санузел', 'Большая терраса', 'Панорамное остекление', 'Эко-материалы'],
       gallery: [
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/83f2c376-3df4-43d0-b67f-fab831a93d4e.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/9e14f735-3d6f-4b22-b1ae-a0ea58a024d5.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/3559aabe-6b56-46f0-bbc1-8da10803d239.jpg',
+        'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/a5cecc4a-b427-4698-b3fd-ab595b025610.jpg',
         'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/c8ad0aa8-801b-446d-af82-34c1ba3983c7.jpg'
       ],
       planImage: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/287f9db0-79b6-441d-8a04-9a6974e24085.jpg',
