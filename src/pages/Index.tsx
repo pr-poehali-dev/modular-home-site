@@ -16,7 +16,7 @@ const Index = () => {
       area: '120 м²',
       price: 'от 2,4 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/16edf763-ea23-4f4f-983f-dfc80242aa44.jpg',
-      features: ['3 спальни', '2 санузла', 'Терраса', 'Потолки 2,5м']
+      features: ['1 этаж', '2 спальни', '1 санузел', 'Терраса', 'Панорамное остекление', 'Эко-материалы']
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const Index = () => {
       area: '180 м²',
       price: 'от 3,6 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/677da7b7-e84c-4d10-88b2-dc30591fe00f.jpg',
-      features: ['4 спальни', '3 санузла', 'Панорамное остекление', 'Потолки 2,5м']
+      features: ['2 этажа', '4 спальни', '2 санузла', 'Панорамное остекление', 'Эко-материалы']
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const Index = () => {
       area: '90 м²',
       price: 'от 1,8 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/2ff5a0a1-2951-463c-bd0d-14d654d35d2a.jpg',
-      features: ['2 спальни', '1 санузел', 'Эко-материалы', 'Потолки 2,5м']
+      features: ['1 этаж', '2 спальни', '1 санузел', 'Панорамное остекление', 'Эко-материалы']
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const Index = () => {
       area: '60 м²',
       price: 'от 1,2 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/4d27b2b2-c979-405d-93e3-673ef17fd229.jpg',
-      features: ['1 этаж', '1 спальня', 'Панорамные окна', 'Потолки 2,5м']
+      features: ['2 этажа', '1 спальня', '1 санузел', 'Панорамные окна', 'Эко-материалы']
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ const Index = () => {
       area: '50 м²',
       price: 'от 1,0 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/e9e82afb-0dbb-493d-b105-f9dc32bab821.jpg',
-      features: ['1 этаж', 'Студия', 'Эко-дерево', 'Потолки 2,5м']
+      features: ['1 этаж', 'Студия', '1 санузел', 'Эко-материалы']
     },
     {
       id: 6,
@@ -56,7 +56,7 @@ const Index = () => {
       area: '140 м²',
       price: 'от 2,8 млн ₽',
       image: 'https://cdn.poehali.dev/projects/f0a0ae31-c519-451b-bc48-c6c031e6723d/files/83f2c376-3df4-43d0-b67f-fab831a93d4e.jpg',
-      features: ['1 этаж', '3 спальни', 'Большая терраса', 'Потолки 2,5м']
+      features: ['1 этаж', '2 спальни', '1 санузел', 'Большая терраса', 'Панорамное остекление', 'Эко-материалы']
     }
   ];
 
