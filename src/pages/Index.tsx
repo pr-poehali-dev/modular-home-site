@@ -24,6 +24,11 @@ const Index = () => {
   const [formMessage, setFormMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
+  const [callbackName, setCallbackName] = useState('');
+  const [callbackLastName, setCallbackLastName] = useState('');
+  const [callbackPhone, setCallbackPhone] = useState('');
+  const [isCallbackSubmitting, setIsCallbackSubmitting] = useState(false);
+  const [callbackMessage, setCallbackMessage] = useState('');
 
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
@@ -708,22 +713,87 @@ const Index = () => {
                 <Icon name="X" size={24} />
               </Button>
             </div>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={async (e) => {
+              e.preventDefault();
+              setIsCallbackSubmitting(true);
+              setCallbackMessage('');
+
+              try {
+                const response = await fetch('https://functions.poehali.dev/26cbb824-766e-46d9-b73b-1a38088ac7e8', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    name: `${callbackName} ${callbackLastName}`,
+                    phone: callbackPhone,
+                    email: '',
+                    message: 'Заявка: Заказать звонок'
+                  })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                  setCallbackMessage('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+                  setCallbackName('');
+                  setCallbackLastName('');
+                  setCallbackPhone('');
+                  setTimeout(() => setShowCallbackForm(false), 2000);
+                } else {
+                  setCallbackMessage(data.error || 'Произошла ошибка при отправке заявки');
+                }
+              } catch (error) {
+                setCallbackMessage('Ошибка соединения. Попробуйте позже.');
+              } finally {
+                setIsCallbackSubmitting(false);
+              }
+            }}>
               <div>
                 <label className="block text-sm font-medium mb-2">Имя</label>
-                <Input placeholder="Введите ваше имя" className="text-lg py-6" />
+                <Input 
+                  placeholder="Введите ваше имя" 
+                  className="text-lg py-6" 
+                  value={callbackName}
+                  onChange={(e) => setCallbackName(e.target.value)}
+                  required
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Фамилия</label>
-                <Input placeholder="Введите вашу фамилию" className="text-lg py-6" />
+                <Input 
+                  placeholder="Введите вашу фамилию" 
+                  className="text-lg py-6" 
+                  value={callbackLastName}
+                  onChange={(e) => setCallbackLastName(e.target.value)}
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Номер телефона</label>
-                <Input type="tel" placeholder="+7 (___) ___-__-__" className="text-lg py-6" />
+                <Input 
+                  type="tel" 
+                  placeholder="+7 (___) ___-__-__" 
+                  className="text-lg py-6" 
+                  value={callbackPhone}
+                  onChange={(e) => setCallbackPhone(e.target.value)}
+                  required
+                />
               </div>
-              <Button className="w-full text-lg py-6 hover-scale" size="lg">
+              {callbackMessage && (
+                <p className={`text-sm text-center ${
+                  callbackMessage.includes('отправлена') ? 'text-green-600' : 'text-red-600'
+                }`}>
+                  {callbackMessage}
+                </p>
+              )}
+              <Button 
+                className="w-full text-lg py-6 hover-scale" 
+                size="lg"
+                type="submit"
+                disabled={isCallbackSubmitting}
+              >
                 <Icon name="Phone" size={20} className="mr-2" />
-                Заказать звонок
+                {isCallbackSubmitting ? 'Отправка...' : 'Заказать звонок'}
               </Button>
               <p className="text-sm text-center text-muted-foreground">
                 Мы перезвоним вам в течение 15 минут
